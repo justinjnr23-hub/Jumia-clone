@@ -28,17 +28,11 @@ header {
     gap: 20px;
 }
 
-.Jumia-header h1 {
+.Jumia-header h1 span {
     font-size: 30px;
     margin: 0;
+   color: #f68b1e;
 }
-
-.Jumia-header i {
-    color: #f6c900;
-    font-size: 20px;
-}
-
-
 .search {
     display: flex;
     justify-content: center;
@@ -87,8 +81,21 @@ header {
 main {
     display: grid;
     grid-template-columns: 220px 1fr;
+    grid-template-areas: "banner banner" "sidebar content" ;
     gap: 15px;
     padding: 15px;
+}
+.hero-banner {
+    grid-area: banner;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.main-content {
+    grid-area: content;
+    min-width: 0;
 }
 
 
@@ -320,4 +327,5 @@ footer {
     padding-top: 15px;
     font-size: 13px;
 }
+
     
